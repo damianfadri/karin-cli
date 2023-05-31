@@ -1,19 +1,23 @@
 ﻿using Karin.Core;
+using Microsoft.Extensions.Options;
 
 namespace Karin.Infrastructure
 {
     public class HttpPlaylistFetcher : IPlaylistFetcher
     {
         private readonly HttpClient _client;
+        private readonly DownloadOptions _options;
 
-        public HttpPlaylistFetcher(HttpClient client)
+        public HttpPlaylistFetcher(HttpClient client, IOptions<DownloadOptions> options)
         {
             ArgumentNullException.ThrowIfNull(client, nameof(client));
+            ArgumentNullException.ThrowIfNull(options?.Value, nameof(options));
+
+            _options = options.Value;
 
             _client = client;
             _client.DefaultRequestHeaders.Add(
-                "User-Agent",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0");
+                "User-Agent", _options.UserAgent);
         }
 
         public async IAsyncEnumerable<string> FetchAsync(string uri)

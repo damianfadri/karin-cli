@@ -15,7 +15,8 @@ public class Program
                 config.AddCommandLine(args, new Dictionary<string, string>
                 {
                     { "--i", $"{nameof(DownloadOptions)}:{nameof(DownloadOptions.InputUri)}" },
-                    { "--o", $"{nameof(DownloadOptions)}:{nameof(DownloadOptions.OutputUri)}" }
+                    { "--o", $"{nameof(DownloadOptions)}:{nameof(DownloadOptions.OutputUri)}" },
+                    { "--agent", $"{nameof(DownloadOptions)}:{nameof(DownloadOptions.UserAgent)}" }
                 });
             })
             .ConfigureServices((context, services) =>
