@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karin.Cli", "Karin.Cli\Karin.Cli.csproj", "{C36E8B5A-3A08-4EA1-AE22-B75D472E18E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karin.Cli", "src\Karin.Cli\Karin.Cli.csproj", "{C36E8B5A-3A08-4EA1-AE22-B75D472E18E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karin.Core", "Karin.Core\Karin.Core.csproj", "{54AB20C2-C946-4A0A-946C-B916AEDBA241}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karin.Core", "src\Karin.Core\Karin.Core.csproj", "{54AB20C2-C946-4A0A-946C-B916AEDBA241}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karin.Infrastructure", "Karin.Infrastructure\Karin.Infrastructure.csproj", "{28DBB71D-14B7-4A49-9495-5E177113C8BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karin.Infrastructure", "src\Karin.Infrastructure\Karin.Infrastructure.csproj", "{28DBB71D-14B7-4A49-9495-5E177113C8BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
